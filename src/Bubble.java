@@ -6,6 +6,8 @@ public class Bubble {
         bubble(arr);
         System.out.println(Arrays.toString(arr));
     }
+
+
     static void bubble(int[] arr){
         boolean swapped;
         //run the steps n-1 times
