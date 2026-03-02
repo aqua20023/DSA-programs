@@ -4,7 +4,7 @@ public class recursion {
 //        funInc(3, 16);
 //        inc(18);
 //        System.out.println(fact(5));
-        System.out.println(sumOfDigits(135));
+        System.out.println(productOfDigits(4342));
     }
     static void funDec(int n){
         if(n == 0 ){
@@ -39,5 +39,11 @@ public class recursion {
             return n;
         }
         return sumOfDigits(n/10) + (n%10);
+    }
+    static int productOfDigits(int n){
+        if(n/10==0){
+            return n;
+        }
+        return productOfDigits(n/10) * (n%10);
     }
 }
