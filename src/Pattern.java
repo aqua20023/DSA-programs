@@ -3,7 +3,8 @@ public class Pattern {
 //        pattern1(5);
 //        System.out.println();
 //        pattern2(4);
-        pattern3(5);
+//        pattern3(5);
+        pattern4(5);
     }
     static void pattern1(int n){
         for(int row = 1; row <= n; row++){
@@ -23,6 +24,8 @@ public class Pattern {
     }
     static void pattern3(int n){
         for(int row = 1; row <= n; row++){
+            // C = N - R
+            // for (int col = 1 ; col <= n-row+1; col++){
             for(int col = n; col >= row; col--){
                 System.out.print("* ");
             }
@@ -31,10 +34,18 @@ public class Pattern {
     }
     static void pattern4(int n){
         for(int row = 1; row <= n; row++){
-            for(int col = n; col >= row; col--){
-                System.out.print("* ");
+            for(int col = 1; col <= row; col++){
+                System.out.print(col + " ");
             }
             System.out.println();
         }
     }
+//    static void pattern5(int n){
+//        for(int row= 1; row < 2 * n; row++){
+//            for(int col = 1; n%  ; col++){
+//                System.out.print(col + " ");
+//            }
+//            System.out.println();
+//        }
+//    }
 }
