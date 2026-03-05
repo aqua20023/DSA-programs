@@ -4,8 +4,10 @@ public class recursion {
 //        funInc(3, 16);
 //        inc(18);
 //        System.out.println(fact(5));
-        System.out.println(productOfDigits(4342));
+//        System.out.println(productOfDigits(4342));
+        System.out.println(reverseNum(123));
     }
+
     static void funDec(int n){
         if(n == 0 ){
             return;
@@ -46,4 +48,11 @@ public class recursion {
         }
         return productOfDigits(n/10) * (n%10);
     }
+    static int reverseNum(int n){
+        if(n%10== n){
+            return n;
+        }
+        return (n%10)*10 + reverseNum(n/10);
+    }
+
 }
