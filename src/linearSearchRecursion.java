@@ -8,6 +8,7 @@ public class linearSearchRecursion {
     findingPos(num,1,0);
         System.out.println(idx);
         System.out.println(list);
+        System.out.println(findAllIndex(num,1,0));
 
     }
     static public int find(int[] arr, int target, int i){
@@ -28,6 +29,20 @@ public class linearSearchRecursion {
             list.add(i);
         }
         findingPos(arr, target, ++i);
+    }
+
+    static ArrayList<Integer> findAllIndex(int[] arr ,int target, int i){
+        ArrayList<Integer> find = new ArrayList<>();
+        if(i == arr.length){
+            return find;
+        }
+        if(arr[i] == target){
+            find.add(i);
+        }
+        // this will contain the positin of this function call only
+        ArrayList<Integer> ansFromBelowCalls =  findAllIndex(arr, target, ++i);
+        find.addAll(ansFromBelowCalls);
+        return find;
     }
 
 }
